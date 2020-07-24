@@ -206,6 +206,24 @@ public class Base {
 		Actions a = new Actions(driver);
 		a.moveToElement(element).click().build().perform();
 	}
+	
+	public static void getValues(List<WebElement> element, String value) throws InterruptedException {
+
+		List<WebElement> we = element;
+
+		for (WebElement a : we) {
+			//Thread.sleep(1000);
+			if (a.getText().equalsIgnoreCase(value)) {
+
+				scrollToElementAndClick(a);
+				Thread.sleep(5000);
+				break;
+				
+
+			}
+		}
+		wait5Seconds();
+	}
 	@AfterMethod()
 	public void tearDown()
 	{
