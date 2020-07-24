@@ -82,4 +82,19 @@ public class CheckOutPage_Flipkart {
 	public WebElement saveAndDeliver() {
 		return saveAndDeliver;
 	}
+	
+	@FindBy(className = "_2aUbKa")
+	private WebElement clickOnUser;
+	
+	public WebElement clickOnUser() {
+		return clickOnUser;
+	}
+	
+	
+	@FindBy(className = "_2k68Dy")
+	List<WebElement> optionsForLogOut;
+	
+	public List<WebElement> logout() {
+		return optionsForLogOut;
+	}
 }
